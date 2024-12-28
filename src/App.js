@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
-import { FaHome, FaHeart, FaUser, FaRegHeart, FaTimes, FaSearch } from "react-icons/fa";
+import { FaHome, FaHeart, FaUser, FaRegHeart, FaTimes, FaSearch, FaEnvelope } from "react-icons/fa";
 
 function NavBar() {
   const [chosen, setChosen] = useState("home");
@@ -121,20 +121,16 @@ function App() {
         <Card image="https://cdn-icons-png.flaticon.com/512/147/147136.png" name="Example User2" note="Click on my card to learn more about who I am!" label1="Digital art" label2="Tea" label3="Food" mutuals={["https://cdn-icons-png.freepik.com/512/147/147139.png", "https://cdn-icons-png.flaticon.com/512/147/147137.png"]} />
         <Card image="https://cdn-icons-png.freepik.com/512/147/147129.png" name="Example User3" note="Hi!" label1="Basketball" label2="Movies" label3="Photography" mutuals={[]} />
         <Card image="https://cdn-icons-png.flaticon.com/512/147/147137.png" name="Example User4" note="The weather is nice today!" label1="Jogging" label2="Movies" label3="Shopping" mutuals={["https://cdn-icons-png.freepik.com/512/147/147139.png", "https://cdn-icons-png.flaticon.com/512/147/147136.png", "https://cdn-icons-png.freepik.com/512/147/147141.png"]} />
-        <Card image="https://cdn-icons-png.freepik.com/512/147/147141.png" name="Example User1" note="Nice to meet you!" label1="Swimming" label2="Harry Potter" label3="Hiking" mutuals={["https://cdn-icons-png.flaticon.com/512/147/147137.png"]} />
-        <Card image="https://cdn-icons-png.flaticon.com/512/147/147136.png" name="Example User2" note="Click on my card to learn more about who I am!" label1="Digital art" label2="Tea" label3="Food" mutuals={["https://cdn-icons-png.freepik.com/512/147/147139.png", "https://cdn-icons-png.flaticon.com/512/147/147137.png"]} />
-        <Card image="https://cdn-icons-png.freepik.com/512/147/147129.png" name="Example User3" note="Hi!" label1="Basketball" label2="Movies" label3="Photography" mutuals={[]} />
-        <Card image="https://cdn-icons-png.flaticon.com/512/147/147137.png" name="Example User4" note="The weather is nice today!" label1="Jogging" label2="Movies" label3="Shopping" mutuals={["https://cdn-icons-png.freepik.com/512/147/147139.png", "https://cdn-icons-png.flaticon.com/512/147/147136.png", "https://cdn-icons-png.freepik.com/512/147/147141.png"]} />
+        <Card image="https://cdn-icons-png.freepik.com/512/147/147141.png" name="Example User5" note="Nice to meet you!" label1="Swimming" label2="Harry Potter" label3="Hiking" mutuals={["https://cdn-icons-png.flaticon.com/512/147/147137.png"]} />
+        <Card image="https://cdn-icons-png.flaticon.com/512/147/147136.png" name="Example User6" note="Click on my card to learn more about who I am!" label1="Digital art" label2="Tea" label3="Food" mutuals={["https://cdn-icons-png.freepik.com/512/147/147139.png", "https://cdn-icons-png.flaticon.com/512/147/147137.png"]} />
+        <Card image="https://cdn-icons-png.freepik.com/512/147/147129.png" name="Example User7" note="Hi!" label1="Basketball" label2="Movies" label3="Photography" mutuals={[]} />
+        <Card image="https://cdn-icons-png.flaticon.com/512/147/147137.png" name="Example User8" note="The weather is nice today!" label1="Jogging" label2="Movies" label3="Shopping" mutuals={["https://cdn-icons-png.freepik.com/512/147/147139.png", "https://cdn-icons-png.flaticon.com/512/147/147136.png", "https://cdn-icons-png.freepik.com/512/147/147141.png"]} />
       </div>
-      {/* <footer>
+      <footer>
         <h4>Made by Evangeline Gong</h4>
-        <img
-          src="https://cssdp.org/uploads/2019/08/white-email-icon-png-26.png"
-          class="icon"
-          alt="Email icon"
-        />
-        <div class="logo" id="bottomright">Logo</div>
-      </footer> */}
+        <FaEnvelope size={28} color='#3d3d3d'/>
+        <div class="logo">Logo</div>
+      </footer>
     </div>
   );
 }
