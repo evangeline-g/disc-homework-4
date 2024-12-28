@@ -2,6 +2,7 @@
   font-family: "Lucida Console";
 }
 
+/* define all colors used */
 :root {
   --primary-light: #c2ace4;
   --primary-dark: #3a255d;
@@ -67,6 +68,7 @@ h3 {
   font-weight: bold;
 }
 
+/* the filter button on the header */
 button {
   margin-right: 100px;
   height: 40px;
@@ -85,6 +87,7 @@ button:hover {
   border: 4px solid var(--neutral-light);
 }
 
+/* each of the tab on the navigation bar */
 .tab {
   display: flex;
   align-items: center;
@@ -94,6 +97,7 @@ button:hover {
   color: var(--neutral-dark);
 }
 
+/* when the tab is in selected state */
 .chosen {
   color: var(--primary-dark);
   text-decoration: underline;
@@ -121,21 +125,25 @@ button:hover {
   gap: 280px;
 }
 
+/* both the profile picture of the viewer and other users */
 .pfp {
   border-radius: 50%;
   border: solid 4px var(--neutral-dark);
 }
 
+/* small profile pictures for mutual connections shown on user cards */
 .small {
   width: 40px;
   height: 40px;
 }
 
+/* large profile pictures for the viewer's information display on the header and other users' profile on the cards */
 .large {
   width: 60x;
   height: 60px;
 }
 
+/* labels on user cards to display what they like to do or want to talk about */
 .label {
   padding: 4px;
   height: 16px;
@@ -146,6 +154,7 @@ button:hover {
   line-height: 16px;
 }
 
+/* the cards container */
 .cards {
   width: 85%;
   position: relative;
@@ -157,6 +166,7 @@ button:hover {
   align-items: center;
 }
 
+/* the card that displays user information */
 .card {
   width: 80%;
   height: 60%;
@@ -171,18 +181,15 @@ button:hover {
   gap: 24px;
 }
 
+/* horizontal layout with gap in between elements, for displaying items on the user card */
 .cardlayout {
   display: flex;
   gap: 24px;
   align-items: center;
 }
 
+/* the save button on each user card */
 .save {
   width: 40px;
   color: var(--secondary);
-}
-
-#bottomright {
-  color: #c2ace4;
-  margin-left: 800px;
 }

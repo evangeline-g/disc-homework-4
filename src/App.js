@@ -2,13 +2,16 @@ import './App.css';
 import React, { useState, useEffect } from "react";
 import { FaHome, FaHeart, FaUser, FaRegHeart, FaTimes, FaSearch, FaEnvelope } from "react-icons/fa";
 
+// The navigation bar component.
 function NavBar() {
+  // determines which tab the viewer is currently on
   const [chosen, setChosen] = useState("home");
 
   const switchTab = (index) => {
     setChosen(index);
   }
 
+  // change the chosen state and display of tabs in response to mouse click
   return (
     <nav>
       <div class="logo">Logo</div>
@@ -28,6 +31,7 @@ function NavBar() {
   );
 }
 
+// The profile picture component.
 function Pfp(props) {
 
   return (
@@ -39,9 +43,12 @@ function Pfp(props) {
   )
 }
 
+// The global array variable that keeps track of which users are saved by the viewer.
 const savedUsers = [];
 
+// The save button component.
 function Save(props) {
+  // determines whether this user is saved
   const [saved, setSaved] = useState("no");
 
   const switchSaved = () => {
@@ -52,6 +59,7 @@ function Save(props) {
     }
   }
 
+  // update the saved list of users to include or remove users when the saved state is changed
   useEffect(() => {
     if (saved === "yes") {
       savedUsers.push(props.name);
@@ -64,6 +72,7 @@ function Save(props) {
     }
   }, [saved]);
 
+  // change display of elements in accordance to the saved/not saved state of the user
   return (
     <div class="save" onClick={switchSaved}>
       {saved === "yes" ? <FaHeart size={28} /> : <FaRegHeart size={28} />}
@@ -72,6 +81,7 @@ function Save(props) {
   )
 }
 
+// The card component that contains user information
 function Card(props) {
 
   return (
@@ -88,12 +98,14 @@ function Card(props) {
       </div>
       <div class="cardlayout">
         <Save name={props.name} />
+        {/* displays the list of mutuals (friends of the user who are also friends with the viewer) */}
         <div>
           <div class="cardlayout">
             {props.mutuals.map(mutual => (
               <Pfp image={mutual} size="small" />
             ))}
           </div>
+          {/* but if there's no mutual friend, display nothing */}
           <h6>{props.mutuals.length === 0 ? "" : "mutual"}</h6>
         </div>
       </div>
