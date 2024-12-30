@@ -1,9 +1,11 @@
 import React from "react";
 import { FaTimes, FaSearch, FaEnvelope } from "react-icons/fa";
+import { useState, useEffect } from "react";
 import Cards from './Cards.js';
 import Pfp from "./Pfp.js";
 
 export default function Home() {
+
     return (
         <div>
             <header>

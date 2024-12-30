@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
-const savedUsers = [];
+export const savedUsers = [];
 
 export default function Save({ user }) {
     const [saved, setSaved] = useState(false);
