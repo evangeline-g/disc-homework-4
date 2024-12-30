@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
-export const savedUsers = [];
-
 export default function Save({ user }) {
     const [saved, setSaved] = useState(false);
+    const [savedUsers, setSavedUsers] = useState([])
 
     const switchSaved = () => {
         if (saved) {
@@ -17,10 +16,9 @@ export default function Save({ user }) {
     // update the saved list of users to include or remove users when the saved state is changed
     useEffect(() => {
         if (savedUsers.includes(user)) {
-            const index = savedUsers.indexOf(user);
-            savedUsers.splice(index, 1);
+            setSavedUsers(savedUsers.filter((saveduser, i) => saveduser !== user))
         } else {
-            savedUsers.push(user);
+            setSavedUsers([...savedUsers, user])
         };
     }, [saved])
 
