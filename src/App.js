@@ -1,8 +1,8 @@
 import './App.css';
-import Layout from './components/Layout';
-import Home from './components/Home';
-import Saved from './components/Saved';
-import Profile from './components/Profile';
+import Layout from './webapp/Layout';
+import Home from './webapp/info/HomePage';
+import Profile from './webapp/info/ProfilePage'
+import Saved from './webapp/info/SavedPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {

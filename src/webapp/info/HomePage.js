@@ -1,8 +1,8 @@
 import React from "react";
-import { FaTimes, FaSearch, FaEnvelope } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import Card from './Card.js';
-import Pfp from "./Pfp.js";
+import Card from '../common/Card.js';
+import Header from "../common/Header.js";
+import Footer from "../common/Footer.js";
 
 export default function Home() {
     // the array of users
@@ -30,27 +30,13 @@ export default function Home() {
         <div className="cards">Loading...</div>
     ) : (
         <div>
-            <header>
-                <div class="searchbar">
-                    <h6>Search users...</h6>
-                    <FaTimes />
-                </div>
-                <FaSearch size={28} />
-                <button>Filter</button>
-                <h3>Myfirstname Lastname</h3>
-                <Pfp image="https://cdn-icons-png.flaticon.com/512/3093/3093496.png" size="large" />
-            </header>
+            <Header />
             <div className="cards">
-            {users.map((user) => (
-                <Card user={user} />
-            ))
-            }
-        </div>
-            <footer>
-                <h4>Made by Evangeline Gong</h4>
-                <FaEnvelope size={28} color='#3d3d3d' />
-                <div class="logo">Logo</div>
-            </footer>
+                {users.map((user) => (
+                    <Card user={user} />
+                ))}
+            </div>
+            <Footer />
         </div>
     )
 }
