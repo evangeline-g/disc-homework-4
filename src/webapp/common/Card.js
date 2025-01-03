@@ -6,7 +6,7 @@ export default function Card(props) {
     return (
         <div class="card" key={props.user.id}>
             <div class="cardlayout">
-                <Pfp image={props.user.profilepicture} size="large" />
+                <Pfp image={props.user.profilepicture} />
                 <h5>{props.user.firstname} {props.user.lastname}</h5>
             </div>
             <h6>{props.user.bio}</h6>

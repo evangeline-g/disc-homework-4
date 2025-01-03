@@ -12,7 +12,7 @@ export default function Header() {
             <FaSearch size={28} />
             <button>Filter</button>
             <h3>Myfirstname Lastname</h3>
-            <Pfp image="https://cdn-icons-png.flaticon.com/512/3093/3093496.png" size="large" />
+            <Pfp image="https://cdn-icons-png.flaticon.com/512/3093/3093496.png" />
         </header>
     )
 }

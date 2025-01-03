@@ -4,7 +4,8 @@ import { UserContext } from "../context/UserContext";
 
 export default function Save({ user }) {
     const { savedUsers, updateUser } = useContext(UserContext);
-    const [saved, setSaved] = useState(savedUsers.some((savedUser) => savedUser.id === user.id));
+    const isSaved = savedUsers.some((savedUser) => savedUser.id === user.id);
+    const [saved, setSaved] = useState(isSaved);
 
     const handleClick = () => {
         if (saved) {

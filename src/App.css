@@ -25,7 +25,7 @@ nav {
 }
 
 header {
-  height: 15vh;;
+  height: 15vh;
   width: 85%;
   position: relative;
   left: 15%;
@@ -34,6 +34,12 @@ header {
   align-items: center;
   justify-content: center;
   gap: 24px;
+}
+
+.aboutHeader {
+  height: 10vh;
+  background-color: white;
+  justify-content: space-between;
 }
 
 footer {
@@ -66,6 +72,10 @@ h3 {
   color: var(--neutral-dark);
   font-size: 20px;
   font-weight: bold;
+}
+
+h2 {
+  color: var(--neutral-dark);
 }
 
 /* the filter button on the header */
@@ -138,8 +148,14 @@ button:hover {
 
 /* small profile pictures for mutual connections shown on user cards */
 .small {
-  width: 40px;
-  height: 40px;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+/* large profile pictures for displaying details of user */
+.large {
+  width: 120px !important;
+  height: 120px !important;
 }
 
 /* labels on user cards to display what they like to do or want to talk about */
@@ -151,6 +167,11 @@ button:hover {
   text-align: center;
   color: var(--neutral-light);
   line-height: 16px;
+}
+
+/* labels for user info, including year, gender, and major */
+.infoLabel {
+  background-color: var(--neutral-medium) !important;
 }
 
 /* the cards container */
@@ -181,6 +202,13 @@ button:hover {
   gap: 24px;
 }
 
+/* smaller card that only displays user profile picture and name */
+.smallCard {
+  width: 100px !important;
+  height: 120px !important;
+  align-items: center;
+}
+
 /* horizontal layout with gap in between elements, for displaying items on the user card */
 .cardlayout {
   display: flex;
@@ -192,4 +220,35 @@ button:hover {
 .save {
   width: 40px;
   color: var(--secondary);
+}
+
+/* the about page elements container */
+.about {
+  width: 80%;
+  height: 90vh;
+  position: relative;
+  top: 5vh;
+  left: 20%;
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  grid-template-rows: 50vh 1fr;
+}
+
+.spreadlayout {
+  justify-content: space-between;
+}
+
+.verticalCenter {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.smallCards {
+  grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
